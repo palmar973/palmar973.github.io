@@ -5,7 +5,7 @@ export const siteConfig = {
   title: "Security Researcher & Software Engineer",
   tagline: "Construyendo puentes entre la seguridad ofensiva y el desarrollo de software robusto.",
   description: "Estudiante de último año de Licenciatura en Computación, enfocado en ciberseguridad y arquitectura de software. Creador de herramientas de seguridad open source y desarrollador full-stack.",
-  email: "hola@claudiopalmar.me", // Ajusta esto si tienes un email real
+  email: "contacto@claudiopalmar.me", // Ajusta esto si tienes un email real
   socials: [
     {
       name: "GitHub",
@@ -19,7 +19,7 @@ export const siteConfig = {
     },
     {
       name: "Email",
-      url: "mailto:hola@claudiopalmar.me", 
+      url: "mailto:contacto@claudiopalmar.me", 
       icon: Mail,
     },
   ],
