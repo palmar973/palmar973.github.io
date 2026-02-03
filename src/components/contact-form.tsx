@@ -1,8 +1,9 @@
 "use client";
 
-import { useForm } from "react-hook-form";
+import { useForm as useFormRHF } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useForm as useFormspree } from "@formspree/react";
 
 import { contactFormSchema } from "@/lib/schemas";
 import { toast } from "@/components/ui/sonner";
@@ -21,7 +22,9 @@ import { Button } from "@/components/ui/button";
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export const ContactForm = () => {
-  const form = useForm<ContactFormValues>({
+  const [formspreeState, formspreeSubmit, formspreeReset] = useFormspree<ContactFormValues>("meezbrkd");
+
+  const form = useFormRHF<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
@@ -39,13 +42,18 @@ export const ContactForm = () => {
       return;
     }
 
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    const result = await formspreeSubmit(values);
 
-    toast.success("Mensaje enviado correctamente. Te responderé pronto.");
-    form.reset();
+    if (formspreeState.succeeded) {
+      toast.success("Mensaje enviado correctamente. Te responderé pronto.");
+      form.reset();
+      formspreeReset();
+    } else if (result?.response?.status && result.response.status >= 400) {
+      toast.error("No se pudo enviar el mensaje. Intenta de nuevo.");
+    }
   };
 
-  const isSubmitting = form.formState.isSubmitting;
+  const isSubmitting = form.formState.isSubmitting || formspreeState.submitting;
 
   return (
     <Form {...form}>
