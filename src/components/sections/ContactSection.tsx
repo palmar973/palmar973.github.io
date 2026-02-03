@@ -17,7 +17,7 @@ const ContactSection = () => {
           </h2>
           
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            Estoy disponible para discutir oportunidades de desarrollo, colaboraciones en ciberseguridad o simplemente para hablar sobre tecnología y anime.
+            Estoy disponible para discutir oportunidades de desarrollo y colaboraciones en ciberseguridad.
           </p>
           
           <div className="mt-12 grid gap-10 lg:grid-cols-2 items-start text-left">

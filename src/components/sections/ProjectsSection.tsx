@@ -49,6 +49,8 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       <div className="flex items-center gap-4 mt-4 pt-4 border-t border-border/50">
         <a
           href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors"
         >
           {project.status === 'Research' ? 'Ver Investigación' : 'Ver Proyecto'}
@@ -58,6 +60,8 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
         {project.github && (
            <a
            href={project.github}
+           target="_blank"
+           rel="noopener noreferrer"
            className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
          >
            <Github size={16} />
@@ -80,7 +84,7 @@ const ProjectsSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold">Proyectos Seleccionados</h2>
           </div>
           <div className="hidden md:block h-[1px] flex-1 bg-border mx-8 translate-y-[-10px]" />
-          <a href="https://github.com/tu-usuario" target="_blank" className="hidden md:inline-flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
+          <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
             Ver GitHub completo
             <ArrowUpRight size={16} />
           </a>

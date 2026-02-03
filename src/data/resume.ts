@@ -2,14 +2,14 @@ import { Github, Linkedin, Mail, Code2, Terminal, Shield, Cpu } from 'lucide-rea
 
 export const siteConfig = {
   name: "Claudio Palmar",
-  title: "Security Researcher & Software Engineer",
+  title: "Investigador de Seguridad & Licenciado en Computación",
   tagline: "Construyendo puentes entre la seguridad ofensiva y el desarrollo de software robusto.",
   description: "Estudiante de último año de Licenciatura en Computación, enfocado en ciberseguridad y arquitectura de software. Creador de herramientas de seguridad open source y desarrollador full-stack.",
   email: "contacto@claudiopalmar.me", // Ajusta esto si tienes un email real
   socials: [
     {
       name: "GitHub",
-      url: "https://github.com/tu-usuario", 
+      url: "https://github.com/palmar973", 
       icon: Github,
     },
     {
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     link: "#",
   },
   {
-    title: "Barbershop Management System",
+    title: "Sistema de Gestión de Barbería",
     description: "Solución de escritorio integral construida en Python con SQL para lógica de negocio compleja y gestión de concurrencia entre múltiples barberos. Maneja agendamiento, historial de clientes y control financiero con una interfaz intuitiva.",
     tech: ["Python", "Desktop App", "SQL", "Business Logic"],
     featured: true,
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     tech: ["React", "Vite", "Tailwind CSS", "UX/UI"],
     featured: false,
     status: 'Production',
-    link: "#",
+    link: "https://un-dulcito-web.vercel.app/",
   },
 ];
 
